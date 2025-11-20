@@ -7,41 +7,48 @@ class ForumCarousel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 14),
-      child: Container(
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.1),
-              offset: const Offset(0, 3),
-              blurRadius: 6,
+    final forums = [
+      {
+        "title": "Career & Professional Growth",
+        "imagePath": "assets/home/forum1.png",
+        "buttonText": "Sport",
+      },
+      {
+        "title": "College & Higher Education Talk",
+        "imagePath": "assets/home/forum2.png",
+        "buttonText": "Sport",
+      },
+      {
+        "title": "Networking",
+        "imagePath": "assets/forum/top3.png",
+        "buttonText": "Sport",
+      },
+      {
+        "title": "Personal Branding",
+        "imagePath": "assets/forum/top4.png",
+        "buttonText": "Sport",
+      },
+    ];
+
+    return SizedBox(
+      height: 200,
+      child: PageView.builder(
+        controller: controller,
+        itemCount: forums.length,
+        itemBuilder: (context, index) {
+          final forum = forums[index];
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 14),
+            child: ForumItem(
+              title: forum["title"] as String,
+              imagePath: forum["imagePath"] as String,
+              buttonText: (forum["buttonText"] as String?) ?? "More",
+              onButtonPressed: () {
+                // Tambahkan callback jika perlu
+              },
             ),
-          ],
-        ),
-        child: SizedBox(
-          height: 200,
-          child: PageView(
-            controller: controller,
-            children: const [
-              EventCardItem(
-                title: "Alumni Gathering 2025",
-                imagePath: "assets/home/maskgroup.png",
-                buttonText: "More",
-              ),
-              EventCardItem(
-                title: "Workshop Flutter",
-                imagePath: "assets/home/happy.png",
-                buttonText: "Join",
-              ),
-              EventCardItem(
-                title: "Networking Event",
-                imagePath: "assets/home/party.png",
-                buttonText: "Details",
-              ),
-            ],
-          ),
-        ),
+          );
+        },
       ),
     );
   }

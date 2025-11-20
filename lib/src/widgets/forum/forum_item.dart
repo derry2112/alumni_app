@@ -78,10 +78,10 @@ class ForumItem extends StatelessWidget {
                         onPressed: onButtonPressed,
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(
-                            const Color(0xFF344561),
+                            const Color(0xFFE1F9F2),
                           ),
                           foregroundColor: MaterialStateProperty.all(
-                            Colors.white,
+                            const Color(0xFF344561),
                           ),
                           padding: MaterialStateProperty.all(EdgeInsets.zero),
                           shape: MaterialStateProperty.all(
