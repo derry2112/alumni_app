@@ -10,6 +10,10 @@ part 'login/google_button.dart';
 part 'splash/skip_button.dart';
 part 'splash/onboarding.dart';
 part 'header/header.dart';
+part 'nav/bottom_nav.dart';
+part 'load/divider.dart';
+part 'header/menu.dart';
+part 'header/tab_menu.dart';
 
 part 'home/logout_button.dart';
 part 'home/banner_header.dart';
@@ -21,7 +25,5 @@ part 'home/forum_card_carousel.dart';
 part 'home/humas_card.dart';
 part 'home/humas_item.dart';
 
-part 'nav/bottom_nav.dart';
-part 'load/divider.dart';
-part 'header/menu.dart';
-part 'header/tab_menu.dart';
+part 'forum/forum_item.dart';
+part 'forum/forum_card.dart';

@@ -1,8 +1,14 @@
 part of 'screens.dart';
 
-class ForumScreen extends StatelessWidget {
+class ForumScreen extends StatefulWidget {
   const ForumScreen({super.key});
 
+  @override
+  State<ForumScreen> createState() => _ForumScreenState();
+}
+
+class _ForumScreenState extends State<ForumScreen> {
+  final PageController _pageController = PageController(viewportFraction: 1.0);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,6 +52,9 @@ class ForumScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 20),
+                const SizedBox(height: 8),
+                EventCardCarousel(controller: _pageController),
+                const SizedBox(height: 18),
             ],
           ),
         ),

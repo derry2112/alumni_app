@@ -10,7 +10,7 @@ import '../widgets/widgets.dart';
 part 'login_screens.dart';
 part 'home_screens.dart';
 part 'splash_screens.dart';
-part 'dashboard_screens.dart';
+part 'discover_screens.dart';
 part 'onboarding_screens.dart';
 part 'nav_screens.dart';
 part 'forum_screens.dart';
