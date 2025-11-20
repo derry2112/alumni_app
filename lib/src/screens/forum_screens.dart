@@ -5,10 +5,50 @@ class ForumScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        "Forum Screen",
-        style: TextStyle(fontSize: 20),
+    return Scaffold(
+      body: SafeArea(
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Header(
+                onLogout: () => context.read<LoginBloc>().add(LogoutPressed()),
+              ),
+              const SizedBox(height: 12),
+              const Row(
+                children: [
+                  MenuHeader(
+                    title: "",
+                    imagePath: "assets/menu/Icon - Menu.png",
+                  ),
+                  MenuHeader(
+                    title: "News",
+                    imagePath: "assets/menu/Layer_1.png",
+                  ),
+                ],
+              ),
+              const SizedBox(height: 12),
+              const Row(
+                children: [
+                  Expanded(
+                    child: MenuTab(
+                      title: "Discover Forums",
+                      isActive: true,
+                    ),
+                  ),
+                  Expanded(
+                    child: MenuTab(
+                      title: "Joined Forums",
+                      isActive: false,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+            ],
+          ),
+        ),
       ),
     );
   }

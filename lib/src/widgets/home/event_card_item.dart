@@ -39,8 +39,9 @@ class EventCardItem extends StatelessWidget {
           SizedBox(
             height: imageHeight,
             child: ClipRRect(
-              borderRadius:
-                  const BorderRadius.vertical(top: Radius.circular(8)),
+              borderRadius: const BorderRadius.vertical(
+                top: Radius.circular(8),
+              ),
               child: Image.asset(
                 imagePath,
                 width: double.infinity,
@@ -71,32 +72,36 @@ class EventCardItem extends StatelessWidget {
                   Align(
                     alignment: Alignment.centerRight,
                     child: SizedBox(
-                        width: 69,
-                        height: 22,
-                        child: ElevatedButton(
-                          onPressed: onButtonPressed,
-                          style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all(
-                                const Color(0xFF344561)),
-                            foregroundColor:
-                                MaterialStateProperty.all(Colors.white),
-                            padding: MaterialStateProperty.all(EdgeInsets.zero),
-                            shape: MaterialStateProperty.all(
-                              RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(70)),
-                            ),
-                            elevation: MaterialStateProperty.all(0),
+                      width: 69,
+                      height: 22,
+                      child: ElevatedButton(
+                        onPressed: onButtonPressed,
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(
+                            const Color(0xFF344561),
                           ),
-                          child: Text(
-                            buttonText,
-                            style: const TextStyle(
-                              fontFamily: "DM Sans",
-                              fontSize: 12,
-                              fontWeight: FontWeight.w500,
-                              letterSpacing: -0.24,
+                          foregroundColor: MaterialStateProperty.all(
+                            Colors.white,
+                          ),
+                          padding: MaterialStateProperty.all(EdgeInsets.zero),
+                          shape: MaterialStateProperty.all(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(70),
                             ),
                           ),
-                        )),
+                          elevation: MaterialStateProperty.all(0),
+                        ),
+                        child: Text(
+                          buttonText,
+                          style: const TextStyle(
+                            fontFamily: "DM Sans",
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            letterSpacing: -0.24,
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),

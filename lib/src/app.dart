@@ -11,9 +11,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider<LoginBloc>(
-          create: (context) => LoginBloc(AuthService()),
-        ),
+        BlocProvider<LoginBloc>(create: (context) => LoginBloc(AuthService())),
       ],
       child: Builder(
         builder: (context) {

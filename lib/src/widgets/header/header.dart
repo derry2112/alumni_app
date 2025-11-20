@@ -19,10 +19,7 @@ class Header extends StatelessWidget {
       decoration: BoxDecoration(
         color: const Color(0xFFFCFCFD),
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(
-          color: Colors.white,
-          width: 2,
-        ),
+        border: Border.all(color: Colors.white, width: 2),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.25),
@@ -60,11 +57,7 @@ class Header extends StatelessWidget {
           const Spacer(),
           GestureDetector(
             onTap: onLogout,
-            child: SvgPicture.asset(
-              iconPath,
-              width: 24,
-              height: 24,
-            ),
+            child: SvgPicture.asset(iconPath, width: 24, height: 24),
           ),
         ],
       ),

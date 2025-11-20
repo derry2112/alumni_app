@@ -22,3 +22,6 @@ part 'home/humas_card.dart';
 part 'home/humas_item.dart';
 
 part 'nav/bottom_nav.dart';
+part 'load/divider.dart';
+part 'header/menu.dart';
+part 'header/tab_menu.dart';

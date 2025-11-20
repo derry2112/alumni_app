@@ -31,9 +31,7 @@ class BannerHeaderWidget extends StatelessWidget {
                         color: Colors.white,
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
-                        shadows: [
-                          Shadow(blurRadius: 4, color: Colors.black54),
-                        ],
+                        shadows: [Shadow(blurRadius: 4, color: Colors.black54)],
                       ),
                     ),
                     const TextSpan(
@@ -41,9 +39,7 @@ class BannerHeaderWidget extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,
-                        shadows: [
-                          Shadow(blurRadius: 4, color: Colors.black54),
-                        ],
+                        shadows: [Shadow(blurRadius: 4, color: Colors.black54)],
                       ),
                     ),
                   ],

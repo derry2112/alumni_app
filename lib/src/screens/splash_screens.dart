@@ -39,11 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset(
-              'assets/icon/Layer_1.svg',
-              width: 90,
-              height: 90,
-            ),
+            SvgPicture.asset('assets/icon/Layer_1.svg', width: 90, height: 90),
             const SizedBox(height: 20),
             const Text(
               'Alumni Connect',

@@ -4,10 +4,7 @@ final router = GoRouter(
   debugLogDiagnostics: true,
   initialLocation: '/splash',
   routes: [
-    GoRoute(
-      path: '/splash',
-      builder: (context, state) => const SplashScreen(),
-    ),
+    GoRoute(path: '/splash', builder: (context, state) => const SplashScreen()),
 
     // ONBOARDING
     GoRoute(
@@ -16,21 +13,12 @@ final router = GoRouter(
     ),
 
     // AUTH
-    GoRoute(
-      path: '/login',
-      builder: (context, state) => const LoginScreen(),
-    ),
+    GoRoute(path: '/login', builder: (context, state) => const LoginScreen()),
 
     // MAIN CONTAINER - BOTTOM NAVIGATION
-    GoRoute(
-      path: '/main',
-      builder: (context, state) => const MainContainer(),
-    ),
+    GoRoute(path: '/main', builder: (context, state) => const MainContainer()),
 
     // HOME (Dipanggil dari MainContainer)
-    GoRoute(
-      path: '/main',
-      builder: (context, state) => const HomeScreen(),
-    ),
+    GoRoute(path: '/main', builder: (context, state) => const HomeScreen()),
   ],
 );

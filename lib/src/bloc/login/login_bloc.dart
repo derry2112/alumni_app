@@ -9,15 +9,20 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   }
 
   Future<void> _onLoginWithGooglePressed(
-      LoginWithGooglePressed event, Emitter<LoginState> emit) async {
+    LoginWithGooglePressed event,
+    Emitter<LoginState> emit,
+  ) async {
     emit(LoginLoading());
     try {
       final user = await authService.signInWithGoogle();
       if (user != null) {
         emit(LoginSuccess(user));
       } else {
-        emit(LoginFailure(
-            'Akun belum terdaftar. Silakan daftar melalui portal web.'));
+        emit(
+          LoginFailure(
+            'Akun belum terdaftar. Silakan daftar melalui portal web.',
+          ),
+        );
       }
     } catch (e) {
       emit(LoginFailure(e.toString()));
@@ -25,7 +30,9 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   }
 
   Future<void> _onLogoutPressed(
-      LogoutPressed event, Emitter<LoginState> emit) async {
+    LogoutPressed event,
+    Emitter<LoginState> emit,
+  ) async {
     await authService.signOut();
     emit(LoginInitial());
   }

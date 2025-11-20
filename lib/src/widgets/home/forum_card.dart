@@ -41,8 +41,9 @@ class ForumCard extends StatelessWidget {
               Expanded(
                 flex: 1,
                 child: ClipRRect(
-                  borderRadius:
-                      const BorderRadius.vertical(top: Radius.circular(8)),
+                  borderRadius: const BorderRadius.vertical(
+                    top: Radius.circular(8),
+                  ),
                   child: topImagePath != null
                       ? Image.asset(
                           topImagePath!,
@@ -80,8 +81,11 @@ class ForumCard extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(bottomIcon,
-                                size: 16, color: Color(0xFF344561)),
+                            Icon(
+                              bottomIcon,
+                              size: 16,
+                              color: Color(0xFF344561),
+                            ),
                             const SizedBox(width: 4),
                             Text(
                               bottomText!,

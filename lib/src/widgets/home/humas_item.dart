@@ -150,38 +150,7 @@ class _HumasCardCarouselState extends State<HumasCardCarousel> {
           },
         ),
         const SizedBox(height: 16),
-        Center(
-          child: GestureDetector(
-            onTap: _loadMore,
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                // Garis kiri
-                Container(
-                  width: 140,
-                  height: 1,
-                  color: const Color(0xFF344561),
-                ),
-                const SizedBox(width: 8),
-                const Text(
-                  'Load More',
-                  style: TextStyle(
-                    fontFamily: 'DM Sans',
-                    color: Color(0xFF344561),
-                    fontWeight: FontWeight.w500,
-                    fontSize: 12,
-                  ),
-                ),
-                const SizedBox(width: 8),
-                Container(
-                  width: 140,
-                  height: 1,
-                  color: const Color(0xFF344561),
-                ),
-              ],
-            ),
-          ),
-        ),
+        Center(child: LoadMoreDivider(onTap: _loadMore)),
       ],
     );
   }

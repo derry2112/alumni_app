@@ -10,11 +10,7 @@ class GoogleButton extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        SvgPicture.asset(
-          'assets/icon/Layer_1.svg',
-          width: 90,
-          height: 90,
-        ),
+        SvgPicture.asset('assets/icon/Layer_1.svg', width: 90, height: 90),
         const SizedBox(height: 20),
         const Text(
           'Alumni Connect',
@@ -43,10 +39,7 @@ class GoogleButton extends StatelessWidget {
           child: OutlinedButton.icon(
             onPressed: onPressed,
             style: OutlinedButton.styleFrom(
-              side: const BorderSide(
-                color: Color(0xFF344561),
-                width: 2,
-              ),
+              side: const BorderSide(color: Color(0xFF344561), width: 2),
               backgroundColor: Colors.white,
               foregroundColor: Color(0xFF344561),
               shape: RoundedRectangleBorder(

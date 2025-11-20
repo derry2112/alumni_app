@@ -20,11 +20,7 @@ class OnboardPage extends StatelessWidget {
         // gambar di atas
         Expanded(
           child: Center(
-            child: Image.asset(
-              imageAsset,
-              fit: BoxFit.contain,
-              height: 250,
-            ),
+            child: Image.asset(imageAsset, fit: BoxFit.contain, height: 250),
           ),
         ),
 
@@ -88,19 +84,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       "title": "Stay Updated with Official News",
       "subtitle":
           "Get the latest updates from the school’s Public Relations team — from campus events to alumni activities and official announcements. Stay connected, wherever you are.",
-      "image": "assets/images/onboard1.png"
+      "image": "assets/images/onboard1.png",
     },
     {
       "title": "Connect and Reunite with Fellow Alumni",
       "subtitle":
           "Join your alumni community forum to share stories, discuss ideas, and reconnect with old friends. From memories to new opportunities — all in one place.",
-      "image": "assets/images/onboard2.png"
+      "image": "assets/images/onboard2.png",
     },
     {
       "title": "Share Your Stories and Inspirations",
       "subtitle":
           "Create posts, share photos, and let everyone know what’s new with your batch. Your voice matters — keep the community alive with your stories.",
-      "image": "assets/images/onboard3.png"
+      "image": "assets/images/onboard3.png",
     },
   ];
 
@@ -185,10 +181,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   height: 52,
                   backgroundColor: Colors.white,
                   textColor: const Color(0xFF344561),
-                  border: const BorderSide(
-                    color: Color(0xFF344561),
-                    width: 2,
-                  ),
+                  border: const BorderSide(color: Color(0xFF344561), width: 2),
                   onPressed: next,
                 ),
               ],
